@@ -13,7 +13,19 @@
 // Output: true
 
 function containsDuplicate(nums) {
-    
+    //instantiate empty array (check) to keep track of integers
+    //iterate over nums, checking if the number at the current index is already in the check array
+    //if it is, return true. If not, return false.
+
+    let check = []
+    for(let i=0; i<nums.length; i++){
+        if(check.includes(nums[i])){
+            return true
+        } else {
+            check.push(nums[i])
+        }
+    }
+    return false
 }
 
 module.exports = containsDuplicate;
