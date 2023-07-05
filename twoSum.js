@@ -21,15 +21,14 @@ function twoSum(nums, target){
     //instantiate array (check) with nums[0]
     //loop over nums, starting at index 1. If check[0]+nums[i]==target, push nums[i] into check. Return check.
     //else: continue
-
+    let numsMap= new Map()
     for(let i=0; i<nums.length; i++){
-        let output=[nums[i]]
-        if(output[0]+nums[i+1]===target){
-            console.log('output[0]:', output[0], 'nums[i+1]:', nums[i+1])
-            // output.push(nums[i+1])
-            return [i, i+1] //I'm getting the correct numbers that add up to the target, but what I WANT to return is the indexes of those numbers in the original array.
-        }
-    }
+       let x = target-nums[i]
+       if (numsMap.has(x)) {
+           return [numsMap.get(x),i]
+       }
+       numsMap.set(nums[i], i)
+    } 
 }
 
 twoSum([2,7,11,15], 9)
