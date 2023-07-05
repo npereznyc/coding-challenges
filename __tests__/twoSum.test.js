@@ -9,5 +9,5 @@ test('Test with 3 integers', ()=> {
 })
 
 test('Test with 2 integers', ()=> {
-    expect(twoSum([3,3], 6)).toEqual([0.1])
+    expect(twoSum([3,3], 6)).toEqual([0,1])
 })

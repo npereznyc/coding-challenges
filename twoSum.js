@@ -26,8 +26,8 @@ function twoSum(nums, target){
         let output=[nums[i]]
         if(output[0]+nums[i+1]===target){
             console.log('output[0]:', output[0], 'nums[i+1]:', nums[i+1])
-            output.push(nums[i+1])
-            console.log('output:', output)
+            // output.push(nums[i+1])
+            return [i, i+1] //I'm getting the correct numbers that add up to the target, but what I WANT to return is the indexes of those numbers in the original array.
         }
     }
 }
