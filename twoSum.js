@@ -18,16 +18,13 @@
 // Output: [0,1]
 
 function twoSum(nums, target){
-    //instantiate array (check) with nums[0]
-    //loop over nums, starting at index 1. If check[0]+nums[i]==target, push nums[i] into check. Return check.
-    //else: continue
-    let numsMap= new Map()
+    let numsObj= {}
     for(let i=0; i<nums.length; i++){
        let x = target-nums[i]
-       if (numsMap.has(x)) {
-           return [numsMap.get(x),i]
+       if (numsObj[x] !== undefined) {
+           return [numsObj[x],i]
        }
-       numsMap.set(nums[i], i)
+       numsObj[nums[i]] = i
     } 
 }
 
