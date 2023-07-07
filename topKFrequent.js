@@ -11,7 +11,7 @@ function topKFrequent(nums, k){
         }
     }
     let sorted = Object.entries(obj).sort((a,b)=> b[1]-a[1])
-    // The Object.entries() method in JavaScript returns an array of a given object's own enumerable string-keyed property [key, value] pairs.
+    // The Object.entries() method in JavaScript returns an array of a given object's own[key, value] pairs.
     // .sort() is a JavaScript array method that sorts the elements of an array in-place and returns the array.
     // (a, b) => b[1] - a[1] is an arrow function that is passed to the sort method as a comparator function. This function is used to define the sort order.
     // a and b within the arrow function represent two elements being compared. In your case, since you're sorting an array of arrays, a and b are arrays themselves.
