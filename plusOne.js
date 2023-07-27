@@ -1,15 +1,15 @@
 
 function plusOne(digits) {
-    //convert array to string
-    //convert string to integer
-    //increment integer by one
-    //convert integer to string
-    //convert string to array
+    //convert array to string and get rid of commas:
     string=digits.toString().replaceAll(',','')
+    //convert string to integer and increment by one:
     int=parseInt(string)+1
-    intString=int.toString().replaceAll('',',')
-    console.log(intString)
-    result = intString.split()
+    //convert integer to string
+    intString=int.toString()
+    //convert string to array and map over that array, converting each string element to a number:
+    result=intString.split('').map((item)=>parseInt(item,10))
+    
+    return result
 }
 plusOne([1,2,3])
 
