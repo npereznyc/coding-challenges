@@ -15,7 +15,7 @@ function plusOne(digits) {
     //convert string to array and map over that array, converting each string element to a number:
     result=numString.split('').map((item)=>parseInt(item))
 
-    console.log(result) 
+    return result
 }
 plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3])
 
