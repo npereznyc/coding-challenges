@@ -5,7 +5,7 @@ function plusOne(digits) {
     console.log('string: ', string)
     
     //convert string to integer and increment by one:
-    num=BigInt(string)+1n
+    num=BigInt(string)+1n //n is needed at the end of +1 to designate this as a BigInt literal; just adding +1 won't work
     console.log('num: ', num)
     
     //convert integer to string
