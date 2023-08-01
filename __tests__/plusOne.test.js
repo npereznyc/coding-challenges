@@ -11,3 +11,7 @@ test('Test with four integers', ()=> {
 test('Test with one integer', ()=> {
     expect(plusOne([9])).toEqual([1,0])
 });
+
+test('Test with large integers', ()=> {
+    expect(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3])).toEqual([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,4])
+})
