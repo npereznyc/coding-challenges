@@ -1,21 +1,18 @@
 function isPrime(num) {
-    if (num===2){
-        console.log(true)
-        return
-    }
-    if(num<=1 || num %2 === 0 ){
-        console.log(false)
-        return
-    } 
-    for(let i=2; i<num; i++) {
+    absNum=Math.abs(num)
+
+    if (num===2) return true
+    if(num<=1 || num %2 === 0 ) return false
+
+    const sqtrNum=Math.sqrt(absNum)
+
+    for(let i=3; i<=sqtrNum; i+=2) {
         if(num %i ==0){
-            console.log(false)
-            return
+            return false
         }
         
-    }
-console.log(true)
-        return
+    }  
+    return true
   }
 
   isPrime(75)
